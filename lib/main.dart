@@ -9,8 +9,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Home(),
+    return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.green),
+      home: const Home(),
     );
   }
 }
@@ -27,7 +28,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Welcome home'),
+        title: const Text('E-save app'),
+      ),
+      body: const Center(
+        child: Text('Welcome home'),
       ),
     );
   }
