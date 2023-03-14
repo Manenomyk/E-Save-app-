@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './MyHeaderDrawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.green),
       home: const Home(),
     );
@@ -30,9 +32,25 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Text('E-save app'),
       ),
-      body: const Center(
-        child: Text('Welcome home'),
+      body: Container(
+        child: const Center(
+          child: Text('Home page'),
+        ),
+      ),
+      drawer: Drawer(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              MyHeaderDrawer(),
+              MyDrawerList(),
+            ],
+          ),
+        ),
       ),
     );
+  }
+
+  Widget MyDrawerList() {
+    return Container();
   }
 }
