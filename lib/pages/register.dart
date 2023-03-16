@@ -1,21 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Register extends StatefulWidget {
+class Register extends StatelessWidget {
   const Register({super.key});
 
   @override
-  State<Register> createState() => _RegisterState();
-}
-
-class _RegisterState extends State<Register> {
-  @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
-        child: Text(
-          'Register page',
-        ),
-      ),
+      child: Center(child: Text('Register page'),),
     );
   }
 }

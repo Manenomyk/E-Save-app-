@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Withdraw extends StatefulWidget {
+class Withdraw extends StatelessWidget {
   const Withdraw({super.key});
 
-  @override
-  State<Withdraw> createState() => _WithdrawState();
-}
-
-class _WithdrawState extends State<Withdraw> {
   @override
   Widget build(BuildContext context) {
     return Container(
