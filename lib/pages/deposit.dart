@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class Plan extends StatefulWidget {
-  const Plan({super.key});
+class Deposit extends StatefulWidget {
+  const Deposit({super.key});
 
   @override
-  State<Plan> createState() => _PlanState();
+  State<Deposit> createState() => _DepositState();
 }
 
-class _PlanState extends State<Plan> {
+class _DepositState extends State<Deposit> {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Center(
         child: Text(
-          'Plan page',
+          'Deposit page',
         ),
       ),
     );

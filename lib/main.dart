@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 import './MyHeaderDrawer.dart';
+import 'package:e_saveapp/pages/deposit.dart';
+// import 'package:e_saveapp/pages/home.dart';
+import 'package:e_saveapp/pages/notifications.dart';
+import 'package:e_saveapp/pages/plan.dart';
+import 'package:e_saveapp/pages/statement.dart';
+import 'package:e_saveapp/pages/withdraw.dart';
+import 'package:e_saveapp/pages/account.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,15 +36,33 @@ class _HomeState extends State<Home> {
   var currentPage = DrawerSection.home;
   @override
   Widget build(BuildContext context) {
+    var container;
+    if (currentPage == DrawerSection.home) {
+      container = Home();
+    } 
+    else if (currentPage == DrawerSection.plan) {
+      container = Plan();
+    } 
+    else if (currentPage == DrawerSection.deposit) {
+      container = Deposit();
+    } 
+    else if (currentPage == DrawerSection.withdraw) {
+      container = Withdraw();
+    } 
+    else if (currentPage == DrawerSection.statement) {
+      container = Statement();
+    } 
+    else if (currentPage == DrawerSection.notifications) {
+      container = Notifications();
+    } 
+    else if (currentPage == DrawerSection.account) {
+      container = Account();
+    }
     return Scaffold(
       appBar: AppBar(
         title: const Text('E-save app'),
       ),
-      body: Container(
-        child: const Center(
-          child: Text('Home page'),
-        ),
-      ),
+      body: container(),
       drawer: Drawer(
         child: SingleChildScrollView(
           child: Column(
