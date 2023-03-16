@@ -40,23 +40,17 @@ class _HomeState extends State<Home> {
     var container;
     if (currentPage == DrawerSection.dashboard) {
       container = Dashboard();
-    } 
-    else if (currentPage == DrawerSection.plan) {
+    } else if (currentPage == DrawerSection.plan) {
       container = Plan();
-    } 
-    else if (currentPage == DrawerSection.deposit) {
+    } else if (currentPage == DrawerSection.deposit) {
       container = Deposit();
-    } 
-    else if (currentPage == DrawerSection.withdraw) {
+    } else if (currentPage == DrawerSection.withdraw) {
       container = Withdraw();
-    } 
-    else if (currentPage == DrawerSection.statement) {
+    } else if (currentPage == DrawerSection.statement) {
       container = Statement();
-    } 
-    else if (currentPage == DrawerSection.notifications) {
+    } else if (currentPage == DrawerSection.notifications) {
       container = Notifications();
-    } 
-    else if (currentPage == DrawerSection.account) {
+    } else if (currentPage == DrawerSection.account) {
       container = Account();
     }
     return Scaffold(
@@ -80,7 +74,7 @@ class _HomeState extends State<Home> {
   Widget MyDrawerList() {
     return Container(
       padding: EdgeInsets.only(
-        top: 15,
+        top: 5,
       ),
       child: Column(
         children: [
