@@ -1,3 +1,4 @@
+import 'package:e_saveapp/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 import './MyHeaderDrawer.dart';
 import 'package:e_saveapp/pages/deposit.dart';
@@ -33,12 +34,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  var currentPage = DrawerSection.home;
+  var currentPage = DrawerSection.dashboard;
   @override
   Widget build(BuildContext context) {
     var container;
-    if (currentPage == DrawerSection.home) {
-      container = Home();
+    if (currentPage == DrawerSection.dashboard) {
+      container = Dashboard();
     } 
     else if (currentPage == DrawerSection.plan) {
       container = Plan();
@@ -62,7 +63,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Text('E-save app'),
       ),
-      body: container(),
+      body: container,
       drawer: Drawer(
         child: SingleChildScrollView(
           child: Column(
@@ -87,7 +88,7 @@ class _HomeState extends State<Home> {
             1,
             "Home",
             Icons.home,
-            currentPage == DrawerSection.home ? true : false,
+            currentPage == DrawerSection.dashboard ? true : false,
           ),
           menuitem(
             2,
@@ -138,7 +139,7 @@ class _HomeState extends State<Home> {
           Navigator.pop(context);
           setState(() {
             if (id == 1) {
-              currentPage = DrawerSection.home;
+              currentPage = DrawerSection.dashboard;
             }
             if (id == 2) {
               currentPage = DrawerSection.plan;
@@ -190,7 +191,7 @@ class _HomeState extends State<Home> {
 }
 
 enum DrawerSection {
-  home,
+  dashboard,
   plan,
   deposit,
   withdraw,
