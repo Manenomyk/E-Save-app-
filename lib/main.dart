@@ -3,6 +3,7 @@ import 'package:e_saveapp/pages/dashboard.dart';
 import 'package:e_saveapp/pages/home.dart';
 import 'package:e_saveapp/pages/splash.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import './MyHeaderDrawer.dart';
 import 'package:e_saveapp/pages/deposit.dart';
 // import 'package:e_saveapp/pages/home.dart';
@@ -40,11 +41,11 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      splash: 'assets/images/save.png',
+      splash: Lottie.asset('assets/images/loading2.json'),
       splashIconSize: 600,
       duration: 5000,
       nextScreen: Home(),
-      splashTransition: SplashTransition.rotationTransition,
+      splashTransition: SplashTransition.fadeTransition,
     );
   }
 }
