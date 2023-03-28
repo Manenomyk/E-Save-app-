@@ -43,7 +43,7 @@ class _SplashState extends State<Splash> {
     return AnimatedSplashScreen(
       splash: Lottie.asset('assets/images/loading3.json'),
       splashIconSize: 600,
-      duration: 5000,
+      duration: 8000,
       nextScreen: Home(),
       splashTransition: SplashTransition.fadeTransition,
     );
