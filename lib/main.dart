@@ -41,6 +41,8 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
       splash: 'assets/images/save.png',
+      splashIconSize: 600,
+      duration: 5000,
       nextScreen: Home(),
       splashTransition: SplashTransition.rotationTransition,
     );
