@@ -1,6 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:e_saveapp/pages/dashboard.dart';
 import 'package:e_saveapp/pages/home.dart';
+import 'package:e_saveapp/pages/register.dart';
 import 'package:e_saveapp/pages/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -44,7 +45,7 @@ class _SplashState extends State<Splash> {
       splash: Lottie.asset('assets/images/loading3.json'),
       splashIconSize: 600,
       duration: 8000,
-      nextScreen: Home(),
+      nextScreen: Register(),
       splashTransition: SplashTransition.fadeTransition,
     );
   }

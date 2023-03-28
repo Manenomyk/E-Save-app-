@@ -5,8 +5,28 @@ class Register extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(child: Text('Register page'),),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Register'),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        // controller: controller,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 60),
+          child: Form(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/images/img.png',
+                  height: 200,
+                  width: 200,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
