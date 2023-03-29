@@ -11,7 +11,7 @@ class _RegisterState extends State<Register> {
   final _formField = GlobalKey<FormState>();
   final nameController = TextEditingController();
   final emailController = TextEditingController();
-  final passwordController = TextEditingController();
+  final passController = TextEditingController();
   final confirmController = TextEditingController();
   bool passtoggle = true;
 
@@ -41,6 +41,7 @@ class _RegisterState extends State<Register> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.name,
+                  controller: nameController,
                   decoration: InputDecoration(
                     labelText: "Username",
                     border: OutlineInputBorder(),
@@ -51,6 +52,7 @@ class _RegisterState extends State<Register> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
+                  controller: emailController,
                   decoration: InputDecoration(
                     labelText: "Email address",
                     border: OutlineInputBorder(),
@@ -61,6 +63,7 @@ class _RegisterState extends State<Register> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.visiblePassword,
+                  controller: passController,
                   decoration: InputDecoration(
                     labelText: "Password",
                     border: OutlineInputBorder(),
@@ -71,6 +74,7 @@ class _RegisterState extends State<Register> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.visiblePassword,
+                  controller: confirmController,
                   decoration: InputDecoration(
                     labelText: "Confirm password",
                     border: OutlineInputBorder(),
