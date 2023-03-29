@@ -30,7 +30,31 @@ class Register extends StatelessWidget {
                   decoration: InputDecoration(
                     labelText: "Username",
                     border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.supervised_user_circle_rounded,),
+                  ),
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    labelText: "Email address",
+                    border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.email,),
+                  ),
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.visiblePassword,
+                  decoration: InputDecoration(
+                    labelText: "Password",
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.lock,),
+                  ),
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.visiblePassword,
+                  decoration: InputDecoration(
+                    labelText: "Confirm password",
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.lock,),
                   ),
                 ),
               ],
