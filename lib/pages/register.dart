@@ -50,6 +50,7 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                 ),
+                SizedBox(height: 20,),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
                   controller: emailController,
@@ -61,6 +62,7 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                 ),
+                SizedBox(height: 20,),
                 TextFormField(
                   keyboardType: TextInputType.visiblePassword,
                   controller: passController,
@@ -72,6 +74,7 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                 ),
+                SizedBox(height: 20,),
                 TextFormField(
                   keyboardType: TextInputType.visiblePassword,
                   controller: confirmController,
