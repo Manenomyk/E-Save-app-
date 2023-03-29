@@ -87,8 +87,8 @@ class _RegisterState extends State<Register> {
                           );
                         },
                         child: Icon(passtoggle
-                            ? Icons.visibility
-                            : Icons.visibility_off),
+                            ? Icons.visibility_off
+                            : Icons.visibility),
                       )),
                 ),
                 SizedBox(
@@ -113,8 +113,8 @@ class _RegisterState extends State<Register> {
                           );
                         },
                         child: Icon(passtoggle
-                            ? Icons.visibility
-                            : Icons.visibility_off),
+                            ? Icons.visibility_off
+                            : Icons.visibility),
                       )),
                 ),
                 SizedBox(

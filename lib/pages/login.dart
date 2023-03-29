@@ -76,8 +76,8 @@ class _LoginState extends State<Login> {
                           );
                         },
                         child: Icon(passtoggle
-                            ? Icons.visibility
-                            : Icons.visibility_off),
+                            ? Icons.visibility_off
+                            : Icons.visibility),
                       )),
                 ),
                 SizedBox(
