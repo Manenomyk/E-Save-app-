@@ -8,6 +8,12 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  final _formField = GlobalKey<FormState>();
+  final nameController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final confirmController = TextEditingController();
+  bool passtoggle = true;
 
   @override
   Widget build(BuildContext context) {
@@ -30,13 +36,17 @@ class _RegisterState extends State<Register> {
                   height: 200,
                   width: 200,
                 ),
-                SizedBox(height: 50,),
+                SizedBox(
+                  height: 50,
+                ),
                 TextFormField(
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                     labelText: "Username",
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.supervised_user_circle_rounded,),
+                    prefixIcon: Icon(
+                      Icons.supervised_user_circle_rounded,
+                    ),
                   ),
                 ),
                 TextFormField(
@@ -44,7 +54,9 @@ class _RegisterState extends State<Register> {
                   decoration: InputDecoration(
                     labelText: "Email address",
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.email,),
+                    prefixIcon: Icon(
+                      Icons.email,
+                    ),
                   ),
                 ),
                 TextFormField(
@@ -52,7 +64,9 @@ class _RegisterState extends State<Register> {
                   decoration: InputDecoration(
                     labelText: "Password",
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.lock,),
+                    prefixIcon: Icon(
+                      Icons.lock,
+                    ),
                   ),
                 ),
                 TextFormField(
@@ -60,7 +74,9 @@ class _RegisterState extends State<Register> {
                   decoration: InputDecoration(
                     labelText: "Confirm password",
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.lock,),
+                    prefixIcon: Icon(
+                      Icons.lock,
+                    ),
                   ),
                 ),
               ],
@@ -71,4 +87,3 @@ class _RegisterState extends State<Register> {
     );
   }
 }
-
