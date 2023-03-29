@@ -1,3 +1,4 @@
+import 'package:e_saveapp/pages/login.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
@@ -146,7 +147,14 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => const Login(),
+                          ),
+                        );
+                      },
                       child: Text(
                         'Log In',
                         style: TextStyle(
