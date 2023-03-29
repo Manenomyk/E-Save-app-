@@ -25,7 +25,7 @@ class _RegisterState extends State<Register> {
       body: SingleChildScrollView(
         // controller: controller,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 60),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
           child: Form(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -135,7 +135,28 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                   ),
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Already have an account?",
+                      style: TextStyle(
+                        fontSize: 17,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Log In',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ],
             ),
           ),
