@@ -37,7 +37,7 @@ class _RegisterState extends State<Register> {
                   width: 200,
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.name,
@@ -71,12 +71,23 @@ class _RegisterState extends State<Register> {
                   keyboardType: TextInputType.visiblePassword,
                   controller: passController,
                   decoration: InputDecoration(
-                    labelText: "Password",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(
-                      Icons.lock,
-                    ),
-                  ),
+                      labelText: "Password",
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(
+                        Icons.lock,
+                      ),
+                      suffix: InkWell(
+                        onTap: () {
+                          setState(
+                            () {
+                              passtoggle = !passtoggle;
+                            },
+                          );
+                        },
+                        child: Icon(passtoggle
+                            ? Icons.visibility
+                            : Icons.visibility_off),
+                      )),
                 ),
                 SizedBox(
                   height: 20,
@@ -92,13 +103,39 @@ class _RegisterState extends State<Register> {
                       ),
                       suffix: InkWell(
                         onTap: () {
-                          setState(() {
-                            passtoggle = !passtoggle;
-                          },);
+                          setState(
+                            () {
+                              passtoggle = !passtoggle;
+                            },
+                          );
                         },
-                        child: Icon(passtoggle ? Icons.visibility : Icons.visibility_off),
+                        child: Icon(passtoggle
+                            ? Icons.visibility
+                            : Icons.visibility_off),
                       )),
                 ),
+                SizedBox(
+                  height: 20,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Register',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
