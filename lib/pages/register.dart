@@ -69,7 +69,8 @@ class _RegisterState extends State<Register> {
                   height: 20,
                 ),
                 TextFormField(
-                  keyboardType: TextInputType.visiblePassword,
+                  keyboardType: TextInputType.text,
+                  obscureText: true,
                   controller: passController,
                   decoration: InputDecoration(
                       labelText: "Password",
@@ -94,7 +95,8 @@ class _RegisterState extends State<Register> {
                   height: 20,
                 ),
                 TextFormField(
-                  keyboardType: TextInputType.visiblePassword,
+                  keyboardType: TextInputType.text,
+                  obscureText: true,
                   controller: confirmController,
                   decoration: InputDecoration(
                       labelText: "Confirm password",
