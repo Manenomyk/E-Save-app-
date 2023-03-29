@@ -50,7 +50,9 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
                   controller: emailController,
@@ -62,7 +64,9 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 TextFormField(
                   keyboardType: TextInputType.visiblePassword,
                   controller: passController,
@@ -74,17 +78,26 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 TextFormField(
                   keyboardType: TextInputType.visiblePassword,
                   controller: confirmController,
                   decoration: InputDecoration(
-                    labelText: "Confirm password",
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(
-                      Icons.lock,
-                    ),
-                  ),
+                      labelText: "Confirm password",
+                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(
+                        Icons.lock,
+                      ),
+                      suffix: InkWell(
+                        onTap: () {
+                          setState(() {
+                            passtoggle = !passtoggle;
+                          },);
+                        },
+                        child: Icon(passtoggle ? Icons.visibility : Icons.visibility_off),
+                      )),
                 ),
               ],
             ),
