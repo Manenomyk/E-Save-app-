@@ -1,3 +1,4 @@
+import 'package:e_saveapp/pages/home.dart';
 import 'package:e_saveapp/pages/register.dart';
 import 'package:flutter/material.dart';
 
@@ -87,7 +88,14 @@ class _LoginState extends State<Login> {
                   height: 20,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const Home(),
+                      ),
+                    );
+                  },
                   child: Container(
                     height: 60,
                     decoration: BoxDecoration(
