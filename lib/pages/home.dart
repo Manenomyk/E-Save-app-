@@ -63,7 +63,7 @@ class _HomeState extends State<Home> {
         children: [
           menuitem(
             1,
-            "Home",
+            "Dashboard",
             Icons.dashboard,
             currentPage == DrawerSection.dashboard ? true : false,
           ),
